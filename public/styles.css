@@ -13,6 +13,7 @@ html, body {
   .header{
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
   }
 
   h1{
@@ -42,19 +43,23 @@ html, body {
   
   input {
     font-family: 'Roboto', sans-serif;
-    width: 600px;
+    width: 50%;
     border: 1px solid #ddd;
     height: 40px;
     padding: 0 20px;
     font-size: 14px;
   }
 
-  div input{
-    width: 500px;
+  .inputBox{
+    width:50%;
+  }
+
+  .inputBox input{
+    width: 84%;
   }
   
   button {
-    width: 100px;
+    width: 15%;
     height: 40px;
     font-size: 14px;
     background: #069;
@@ -66,11 +71,17 @@ html, body {
   }
   
   .messages {
-    width: 600px;
+    width: 50%;
     height: 350px;
     margin: 20px 0;
     border: 1px solid #ddd;
     padding: 20px;
     padding-bottom: 0;
     overflow-y: scroll;
+  }
+
+  @media (max-width: 600px){
+    .messages, .inputBox, input{
+      width: 100%;
+    }
   }
