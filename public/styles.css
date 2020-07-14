@@ -13,18 +13,19 @@ html, body {
   .header{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin: 20px 0;
   }
 
   h1{
     line-height: 45px;
     font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
   }
 
   img{
     width: 50px;
-    padding-bottom: 30px;
-    padding-left: 10px;
+    height:45px;
+    margin-left: 10px;
     
   }
   
@@ -35,10 +36,6 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-
-  h1{
-    margin-bottom: 20px;
   }
   
   input {
@@ -55,19 +52,18 @@ html, body {
   }
 
   .inputBox input{
-    width: 82%;
+    width: 84%;
   }
   
   button {
     width: 15%;
     height: 40px;
-    font-size: 14px;
+    font-size: .8rem;
     background: #069;
     text-align: center;
     line-height: 30px;
     font-weight: bold;
     color: #FFF;
-    margin-top: 10px;
   }
   
   .messages {
@@ -80,8 +76,28 @@ html, body {
     overflow-y: scroll;
   }
 
+  @media (min-width: 600px) and (max-width:770px){
+    .inputBox input{
+      width:84%;
+    }
+
+    button{
+      width:14%;
+    }
+  }
+
   @media (max-width: 600px){
     .messages, .inputBox, input{
       width: 100%;
+    }
+
+    .inputBox{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .inputBox input{
+      width:85%;
     }
   }
