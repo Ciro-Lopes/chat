@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html, body {
     height: 100%;
   }
@@ -7,31 +9,57 @@ html, body {
     padding: 0;
     box-sizing: border-box;
   }
+
+  .header{
+    display: flex;
+    flex-direction: row;
+  }
+
+  h1{
+    line-height: 45px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  img{
+    width: 50px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    
+  }
   
   #chat {
-    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+
+  h1{
+    margin-bottom: 20px;
+  }
   
   input {
+    font-family: 'Roboto', sans-serif;
     width: 600px;
     border: 1px solid #ddd;
-    height: 50px;
+    height: 40px;
     padding: 0 20px;
     font-size: 14px;
   }
+
+  div input{
+    width: 500px;
+  }
   
   button {
-    width: 600px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
     font-size: 14px;
     background: #069;
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
     font-weight: bold;
     color: #FFF;
     margin-top: 10px;
@@ -39,8 +67,10 @@ html, body {
   
   .messages {
     width: 600px;
-    height: 400px;
+    height: 350px;
     margin: 20px 0;
     border: 1px solid #ddd;
     padding: 20px;
+    padding-bottom: 0;
+    overflow-y: scroll;
   }

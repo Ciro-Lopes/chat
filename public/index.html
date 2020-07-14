@@ -13,20 +13,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <form id="chat">
-            <input type="text" name="username" id="username" placeholder="Digite seu usuário">
-            <div class="messages"></div>
+    <form id="chat">
+        <div class="header">
+            <h1>CHAT DO ZIRAO</h1>
+            <img src="joinha.png" alt="joinha">
+        </div>
+        <input type="text" name="username" id="username" placeholder="Digite seu usuário">
+        <div class="messages" id="messages"></div>
+        <div>
             <input type="text" name="message" id="message" placeholder="Digite sua Mensagem">
             <button type="submit">Enviar</button>
-        </form>
-    </div>
+        </div>
+    </form>
 
     <script type="text/javascript">
         var socket = io('https://chat-do-zirao.herokuapp.com/');
 
         function renderMessage(message) {
-            $('.messages').append('<div class=message"><strong>' + message.author + '</strong>: ' + message.message + '</div>');
+            $('.messages').append('<div class=message"><strong>' + message.author + '</strong>: ' + message.message + '</div><br/>');
         }
 
         socket.on("receivedMessage", function (message) {
@@ -49,6 +53,8 @@
                 renderMessage(messageObject);
 
                 $('input[name=message]').val('')
+                const objDiv = document.getElementById("messages");
+                objDiv.scrollTop = objDiv.scrollHeight;
             }
         });
 
