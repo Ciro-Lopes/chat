@@ -35,6 +35,8 @@
 
         socket.on("receivedMessage", function (message) {
             renderMessage(message);
+            const objDiv = document.getElementById("messages");
+            objDiv.scrollTop = objDiv.scrollHeight;
         });
 
         $('#chat').submit(function (event) {
